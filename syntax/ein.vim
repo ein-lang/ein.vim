@@ -17,7 +17,7 @@ syn match einComment "#.*"
 
 syn region einString start="\"" skip="\\\"" end="\""
 
-syn match einNumber "-\?\(\<\d\+\.\d\+\>\)"
+syn match einNumber "-\?\(\<\d\+\(\.\d\+\)\?\>\)"
 
 hi def link einComment Comment
 hi def link einConditional Conditional
