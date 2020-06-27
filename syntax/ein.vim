@@ -4,28 +4,31 @@ endif
 
 let b:current_syntax = 'ein'
 
+syn keyword einBoolean True False
+syn keyword einNone None
 syn keyword einConditional case else if then
-syn keyword einTypeDefinition type
-syn keyword einImport import
 syn keyword einExport export
-
-syn match einOperator "\(|\|&&\|||\|->\|==\|/=\|<=\|>=\|<\|>\|+\|-\|*\|/\)"
-
-syn match einType "\<[A-Z][0-9A-Za-z]*"
-
-syn match einDelimiter "[,()[\]{}]"
+syn keyword einImport import
+syn keyword einTypeDefinition type
 
 syn match einComment "#.*"
+syn match einDelimiter "[,()[\]{}]"
+syn match einConditionalArrow "=>"
+syn match einNumber "-\?\(\<\d\+\(\.\d\+\)\?\>\)"
+syn match einOperator "\(|\|&&\|||\|->\|==\|/=\|<=\|>=\|<\|>\|+\|-\|*\|/\)"
+syn match einType "\<[A-Z][0-9A-Za-z]*"
 
 syn region einString start="\"" skip="\\\"" end="\""
 
-syn match einNumber "-\?\(\<\d\+\(\.\d\+\)\?\>\)"
-
+hi def link einBoolean Boolean
 hi def link einComment Comment
 hi def link einConditional Conditional
 hi def link einDelimiter Delimiter
+hi def link einExport PreProc
 hi def link einImport Include
-hi def link einNumber Float
+hi def link einConditionalArrow Label
+hi def link einNone Constant
+hi def link einNumber Number
 hi def link einOperator Operator
 hi def link einString String
 hi def link einType Type
