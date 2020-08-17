@@ -6,6 +6,7 @@ let b:current_syntax = 'ein'
 
 syn keyword einBoolean True False
 syn keyword einNone None
+syn keyword einLet in let
 syn keyword einConditional case else if then
 syn keyword einExport export
 syn keyword einImport import
@@ -22,6 +23,7 @@ syn region einString start="\"" skip="\\\"" end="\""
 
 hi def link einBoolean Boolean
 hi def link einComment Comment
+hi def link einLet Keyword
 hi def link einConditional Conditional
 hi def link einDelimiter Delimiter
 hi def link einExport PreProc
