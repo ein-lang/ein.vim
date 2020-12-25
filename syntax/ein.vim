@@ -10,6 +10,7 @@ syn keyword einLet in let
 syn keyword einConditional case else if then
 syn keyword einExport export
 syn keyword einImport import
+syn keyword einFfi foreign
 syn keyword einTypeDefinition type
 
 syn match einComment "#.*"
@@ -28,6 +29,7 @@ hi def link einConditional Conditional
 hi def link einDelimiter Delimiter
 hi def link einExport PreProc
 hi def link einImport Include
+hi def link einFfi Define
 hi def link einConditionalArrow Label
 hi def link einNone Constant
 hi def link einNumber Number
